@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO : Change the Linear Layout to ConstraintLayout -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -16,32 +17,48 @@
         android:layout_height="wrap_content"
         android:text="Tea Me"
         android:textSize="48dp"
-        />
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk" />
+        android:text="Milk"
+        android:layout_marginTop="32dp"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@id/headingText"
+        app:layout_constraintTop_toBottomOf="@id/headingText" />
 
     <CheckBox
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:text="Sugar"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@id/headingText"
+        app:layout_constraintTop_toBottomOf="@id/milkBox" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lemon" />
+        android:text="Lemon"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@id/headingText"
+        app:layout_constraintTop_toBottomOf="@id/sugarBox" />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/tea"
         android:scaleType="centerCrop"
-        android:src="@drawable/tea" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,50 +15,56 @@
         android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
         android:elevation="5dp"
+        android:text="@string/tea_me"
+        android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
         android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk"
         android:layout_marginTop="32dp"
         android:elevation="5dp"
+        android:text="@string/milk"
         app:layout_constraintStart_toStartOf="@id/headingText"
-        app:layout_constraintTop_toBottomOf="@id/headingText" />
+        app:layout_constraintTop_toBottomOf="@id/headingText"
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sugar"
         android:elevation="5dp"
+        android:text="@string/sugar"
         app:layout_constraintStart_toStartOf="@id/headingText"
-        app:layout_constraintTop_toBottomOf="@id/milkBox" />
+        app:layout_constraintTop_toBottomOf="@id/milkBox"
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lemon"
         android:elevation="5dp"
+        android:text="@string/lemon"
         app:layout_constraintStart_toStartOf="@id/headingText"
-        app:layout_constraintTop_toBottomOf="@id/sugarBox" />
+        app:layout_constraintTop_toBottomOf="@id/sugarBox"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/tea"
+        android:contentDescription="@string/image_of_tea_being_poured"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

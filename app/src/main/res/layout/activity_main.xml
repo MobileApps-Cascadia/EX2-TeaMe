@@ -1,47 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO : Change the Linear Layout to ConstraintLayout -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--  Change the Linear Layout to ConstraintLayout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TODO : Add constraints to position the check boxes and text view,
+    <!--  Add constraints to position the check boxes and text view,
                 over the top-left gray area of the image as shown in the Exercise doc -->
-
-    <TextView
-        android:id="@+id/headingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
-        />
-
-    <CheckBox
-        android:id="@+id/milkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Milk" />
-
-    <CheckBox
-        android:id="@+id/sugarBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sugar" />
-
-    <CheckBox
-        android:id="@+id/lemonBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lemon" />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
         android:scaleType="centerCrop"
-        android:src="@drawable/tea" />
+        android:src="@drawable/tea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
+
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="150dp"
+        android:buttonTint="#5D4037"
+        android:checked="false"
+        android:text="@string/milk"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/sugarBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:buttonTint="#5D4037"
+        android:text="@string/sugar"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/lemonBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="250dp"
+        android:buttonTint="#5D4037"
+        android:checked="false"
+        android:text="@string/lemon"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="395dp"
+        android:layout_height="100dp"
+        android:background="#CC795548"
+        android:text="@string/tea_me"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

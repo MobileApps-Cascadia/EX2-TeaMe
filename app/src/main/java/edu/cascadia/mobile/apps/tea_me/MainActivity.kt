@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
         lemonCheckBox = findViewById(R.id.lemonBox)
 
         //TODO: Assign each checkbox an EventHandler using a setOnCheckedChangeListener to calls the clickIt function with two parameters
-
+        milkCheckBox.setOnCheckedChangeListener { box, selected -> clickIt(box, selected) }
+        sugarCheckBox.setOnCheckedChangeListener { box, selected -> clickIt(box, selected) }
+        lemonCheckBox.setOnCheckedChangeListener { box, selected -> clickIt(box, selected) }
     }
 
     fun clickIt(box: CompoundButton, selected: Boolean ) {
@@ -36,8 +38,9 @@ class MainActivity : AppCompatActivity() {
         for (goodies in TeaGoodies) {
             goodiesString.append(goodies).append(", ")
         }
+        goodiesString.append("Love")
         //Display the string as a temporary popup - called a "Toast"
         Toast.makeText(this@MainActivity, goodiesString, Toast.LENGTH_SHORT).show()
     }
-
+ // Added to have a difference between main and branch
 }

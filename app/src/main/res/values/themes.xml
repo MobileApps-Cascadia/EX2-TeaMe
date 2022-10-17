@@ -3,12 +3,12 @@
     <style name="Theme.TeaMe" parent="Theme.MaterialComponents.Light.DarkActionBar">
 
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorPrimary">#795548</item>
+        <item name="colorPrimaryVariant">#5D4037</item>
         <item name="colorOnPrimary">@color/primary_text</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondary">#5D4037</item>
         <item name="colorSecondaryVariant">@color/secondary_dark</item>
         <item name="colorOnSecondary">@color/secondary_text</item>
 

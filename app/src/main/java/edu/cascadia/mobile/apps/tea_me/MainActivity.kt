@@ -42,5 +42,5 @@ class MainActivity : AppCompatActivity() {
         //Display the string as a temporary popup - called a "Toast"
         Toast.makeText(this@MainActivity, goodiesString, Toast.LENGTH_SHORT).show()
     }
-
+ // Added to have a difference between main and branch
 }

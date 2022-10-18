@@ -1,47 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO : Change the Linear Layout to ConstraintLayout -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- : Change the Linear Layout to ConstraintLayout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TODO : Add constraints to position the check boxes and text view,
+    <!-- : Add constraints to position the check boxes and text view,
                 over the top-left gray area of the image as shown in the Exercise doc -->
 
     <TextView
         android:id="@+id/headingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tea Me"
-        android:textSize="48dp"
-        />
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tea_me"
+        android:textStyle="bold"
+        android:textSize="48sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/milkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Milk" />
+        android:text="@string/milk"
+        app:layout_constraintTop_toBottomOf="@id/headingText"
+        app:layout_constraintLeft_toLeftOf="@id/headingText"
+        android:layout_marginTop="32dp"
+
+
+        />
 
     <CheckBox
         android:id="@+id/sugarBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sugar" />
+        android:text="@string/sugar"
+        app:layout_constraintTop_toBottomOf="@id/milkBox"
+        app:layout_constraintLeft_toLeftOf="@id/milkBox"
+
+        />
 
     <CheckBox
         android:id="@+id/lemonBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lemon" />
+        android:text="@string/lemon"
+
+        app:layout_constraintTop_toBottomOf="@id/sugarBox"
+        app:layout_constraintLeft_toLeftOf="@id/sugarBox"
+        />
 
     <ImageView
         android:id="@+id/teaImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/tea_me"
         android:scaleType="centerCrop"
-        android:src="@drawable/tea" />
+        android:src="@drawable/tea"
+        android:alpha="0.6"
 
 
-</LinearLayout>
+
+
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@id/teaImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

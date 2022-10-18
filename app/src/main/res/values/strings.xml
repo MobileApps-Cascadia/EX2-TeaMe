@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Tea Me</string>
+    <string name="milk">Milk</string>
+    <string name="tea_me">Tea Me</string>
+    <string name="sugar">Sugar</string>
+    <string name="lemon">Lemon</string>
 
 </resources>
